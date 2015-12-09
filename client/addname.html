@@ -1,0 +1,14 @@
+<template name = "addName">
+ <div class="container">
+    <h3>Add Name:</h3>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+    {{> quickForm collection="BabyNames" id="insertNameForm" class="addName" type="insert" buttonClasses="btn btn-lg btn-warning" fields="name, gender, meaning"}}
+      <div class="col-sm-3"></div>
+
+    </div>
+  </div>
+</div>
+
+</template>

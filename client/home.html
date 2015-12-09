@@ -1,0 +1,42 @@
+<template name = "home">
+
+  <div class="container">
+
+    <div class="row">
+
+      {{#if currentUser}}
+
+      <h3>New Names:</h3>
+      {{#each names}}
+
+      <div class="jumbotron {{gender}}">
+        <h3>{{name}}</h3>
+          <h4>Meaning: {{meaning}}</h4>
+          <button type="button" class="btn btn-default like">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="btn btn-default dislike">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+      </div>
+
+
+      <hr>
+
+
+      {{/each}}
+
+      {{else}}
+
+      <h3>Welcome to my Baby Names App</h3>
+      Please sign in to add names to the database. You can then like or dislike names and add a partner to generate a list of names you both like.
+      <center><img src="stork.png"></center>
+
+      {{/if}}
+
+
+    </div>
+  </div>
+
+
+</template>

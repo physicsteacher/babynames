@@ -1,0 +1,17 @@
+<template name = "matches">
+
+    <div class="container">
+      <div class="row">
+  <h3>Names we both like:</h3>
+        {{#each mynames}}
+        <div class="jumbotron {{gender}}">
+          <h3>{{name}}</h3>
+            <h4>Meaning: {{meaning}}</h4>
+
+        </div>
+        <hr>
+        {{/each}}
+      </div>
+    </div>
+
+</template>
