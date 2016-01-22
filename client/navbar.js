@@ -9,5 +9,9 @@ Template.navbar.events({
         Router.go('/');
       }
     })
+  },
+
+  "click .navbar-nav li a": function(event){
+    $(".navbar-collapse").collapse('hide');
   }
 })

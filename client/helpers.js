@@ -67,6 +67,23 @@ Template.home.events(
 
 );
 
+Template.myNames.events(
+  {
+    'click .dislike': function(){
+      var userid = Meteor.userId();
+      BabyNames.update(this._id, {$addToSet: {"disliked": userid}});
+      FlashMessages.sendError("That name was added to your list of disliked names.");
+
+    },
+    'click .like': function(){
+      var userid = Meteor.userId();
+      BabyNames.update(this._id, {$addToSet: {"liked": userid}});
+      FlashMessages.sendSuccess("That name was added to your list of liked names");
+      }
+  },
+
+);
+
 Template.addPartner.events({
   'submit .addPartner': function(event){
     var partner = event.target.partnertext.value;
