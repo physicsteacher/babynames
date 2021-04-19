@@ -3,8 +3,8 @@
   "servers": [
     {
       "host": "159.203.27.255",
-      "username": "root",
-      "password": "e9820triumf"
+      "username": "",
+      "password": ""
       // or pem file (ssh based authentication)
       // "pem": "~/.ssh/digitalocean"
     }
